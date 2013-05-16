@@ -28,14 +28,14 @@ public class SeqSearch {
 			if (args[0].toLowerCase().endsWith("gb")) {
 				RichSequenceIterator rsi = RichSequence.IOTools.readGenbankDNA(
 						br, ns);
-				System.out.println("gb");
+				
 				while (rsi.hasNext()) {
 					RichSequence rs = rsi.nextRichSequence();
 
 					genomename = rs.getDescription();
 
-					workingsequence = rs.getInternalSymbolList().toString()
-							.toLowerCase();
+					workingsequence = rs.getInternalSymbolList().seqString().toLowerCase();
+					//System.out.println(genomename+workingsequence);
 					MotifSearch(workingsequence, searchingsequence, genomename);
 
 				}

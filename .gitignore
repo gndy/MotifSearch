@@ -2,3 +2,5 @@
 .classpath
 .fatjar
 .project
+.gitignore
+.gitignore.swap
