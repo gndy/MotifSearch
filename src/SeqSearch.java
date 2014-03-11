@@ -36,7 +36,7 @@ public class SeqSearch {
 
 					workingsequence = rs.getInternalSymbolList().seqString().toLowerCase();
 					//System.out.println(genomename+workingsequence);
-					MotifSearch(workingsequence, searchingsequence, genomename);
+					motifSearch(workingsequence, searchingsequence, genomename);
 
 				}
 
@@ -49,7 +49,7 @@ public class SeqSearch {
 					genomename = rs.getDescription();
 
 					workingsequence = rs.seqString().toLowerCase();
-					MotifSearch(workingsequence, searchingsequence, genomename);
+					motifSearch(workingsequence, searchingsequence, genomename);
 
 				}
 
@@ -66,7 +66,7 @@ public class SeqSearch {
 	// iterate over
 	// rsi to get the information.
 
-	public static void MotifSearch(String workingsequence,
+	public static void motifSearch(String workingsequence,
 			String searchingsequence, String genomename) {
 		try {
 			// Variables needed...
